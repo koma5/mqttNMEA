@@ -80,7 +80,7 @@ void loop() {
         if (inChar == '$' && countNMEA > 1) {
            //Serial.println("send...");
            NMEA[countNMEA -1] = '\0';
-           client.publish("vw/gps/nmea", NMEA);
+           client.publish("vw/gps", NMEA);
            //Serial.println(NMEA);
            //for(int x = 0; NMEA[x] != '\0';x++)Serial.print(NMEA[x]);
            countNMEA = 0;
